@@ -15,4 +15,11 @@ build website:
 test artifact:
   stage: test
   script:
-    - grep "React" ./public/build/index.html
+    - |
+      if grep "React" ./public/build/index.html; then
+        echo "String 'React' not found in index.html"
+      else
+        echo "String 'React' not found in index.html"
+        exit 1
+      fi
+    
