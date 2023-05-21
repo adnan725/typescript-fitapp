@@ -15,4 +15,4 @@ build website:
 test artifact:
   stage: test
   script:
-    - grep "React" ./build/index.html
+    - grep "React" ./public/build/index.html
