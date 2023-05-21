@@ -6,7 +6,7 @@ build website:
   image: node
   script:
     - npm install
-    - npm build
+    - npm run build
   artifacts:
     paths:
       - build/
