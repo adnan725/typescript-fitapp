@@ -9,4 +9,4 @@ build website:
     - npm run build
   artifacts:
     paths:
-      - build/
+      - public/
