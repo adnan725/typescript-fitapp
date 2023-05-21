@@ -6,3 +6,4 @@ build website:
   image: node
   script:
     - npm install
+    - npm build
