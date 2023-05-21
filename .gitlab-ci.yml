@@ -1,5 +1,6 @@
 stages:
   - build
+  - test 
 
 build website:
   stage: build	
@@ -10,3 +11,8 @@ build website:
   artifacts:
     paths:
       - ./public
+
+test artifact:
+  stage: test
+  script:
+    - grep "React" ./public/index.html
