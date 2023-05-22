@@ -16,5 +16,5 @@ test artifact:
   image: alpine
   stage: test
   script:
-    - grep "React" ./dist/index.html; then
+    - grep "React" ./dist/index.html
        
