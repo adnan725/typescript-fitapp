@@ -13,17 +13,8 @@ build website:
       - public
 
 test artifact:
+  image: alpine
   stage: test
   script:
-    - |
-      if grep "React" ./public/build/index.html; then
-        echo "String 'React' not found in index.html"
-      else
-        echo "String 'React' not found in index.html"
-        exit 1
-      fi
-    
-  artifacts:
-    paths: 
-      - public/
-  
+    - grep "React" ./dist/index.html; then
+       
