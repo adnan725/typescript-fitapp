@@ -1,20 +1,26 @@
 stages:
+  - test
   - build
-  - test 
+  - deploy
+
+test website:
+  image: node
+  stage: test
+  script: 
+    - npm install
+    - npm run test
 
 build website:
-  stage: build	
   image: node
+  stage: build
   script:
     - npm install
     - npm run build
-  artifacts:
-    paths:
-      - public
 
-test artifact:
-  image: alpine
-  stage: test
+netlify:
+  stage: deploy
+  image: node
   script:
-    - grep "React" ./dist/index.html
+    - npm install -g netlify-cli
+    - netlify deploy --dir=build --prod
        
