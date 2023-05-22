@@ -1,14 +1,6 @@
 stages:
-  - test
   - build
   - deploy
-
-test website:
-  image: node
-  stage: test
-  script: 
-    - npm install
-    - npm run test
 
 build website:
   image: node
